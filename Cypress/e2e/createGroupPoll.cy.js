@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import doodlePoll from '../../pages/doodlePoll'
+import doodlePoll from '../e2e/pages/doodlePoll'
 
 describe('Pom implementation', () => {
     beforeEach (() =>{
