@@ -1,4 +1,4 @@
-class DoodleHomePage{
+class doodleHomePage{
 
     elements = {
 
@@ -11,4 +11,4 @@ class DoodleHomePage{
     }
 
 }
-module.exports = new DoodleHomePage();
+module.exports = new doodleHomePage();

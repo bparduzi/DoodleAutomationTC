@@ -8,11 +8,11 @@ class createGroupPoll{
         descriptionInput: () => cy.get('.MeetingMetadata__description__textarea'),
         locationInput: () => cy.get('[data-testid="location-input-field"]').should('exist'),
         sublistId: () => cy.get('#text').should('exist').click(),
-      //  timeInput: () => cy.get()
-        acceptCookies: () => cy.get('#onetrust-accept-btn-handler').should('have.text','Accept All').click()
-
+        timeInput: () => cy.get('.rbc-timeslot-group').should('exist').eq(1).click(),
+        acceptCookies: () => cy.get('#onetrust-accept-btn-handler').should('have.text','Accept All').click(),
+        createInviteButton: () => cy.get('[data-testid="organization-submit-button"]').should('have.text','Create invite and continue').click()
     }
-    
+   
     nameInput(nameInput){
         this.elements.nameInput().type(nameInput);
     }
@@ -35,14 +35,16 @@ class createGroupPoll{
     {
         this.elements.sublistId();
     }
+    timeInput()
+    {
+        this.elements.timeInput()
+    }
     acceptCookies(){
         this.elements.acceptCookies();
     }
-
-    // timeInput(timeInput)
-    // {
-    //     this.elements.timeInput()
-    // }
+    createInviteButton(){
+        this.elements.createInviteButton();
+    }
 
 }
 module.exports =new createGroupPoll();
